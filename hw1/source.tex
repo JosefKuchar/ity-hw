@@ -1,21 +1,18 @@
 \documentclass[twocolumn]{article}
 
-% Language setting
-% Replace `english' with e.g. `spanish' to change the document language
 \usepackage[czech]{babel}
 \usepackage[T1]{fontenc}
-% \usepackage[linkcolor=]{hyperref}
 
 % Set page size and margins
 % Replace `letterpaper' with `a4paper' for UK/EU standard size
 \usepackage[a4paper,total={18cm,24.7cm},left=1.6cm,top=1.5cm]{geometry}
 
-% Useful packages
-\usepackage{amsmath}
-\usepackage{graphicx}
-\usepackage[colorlinks=true, allcolors=blue]{hyperref}
+% % Useful packages
+% \usepackage{amsmath}
+% \usepackage{graphicx}
+\usepackage[colorlinks=true,linkcolor=black,urlcolor=black]{hyperref}
 
-\title{Typografie a publikování - 1. projekt}
+\title{Typografie a publikování\,--\,1. projekt}
 \author{Josef Kuchař\\xkucha28@stud.fit.vutbr.cz}
 \date{}
 
@@ -37,17 +34,19 @@ Porušení konzistence sazby působí v textu rušivě a unavuje čtenářův zr
 Smíšená sazba má o něco volnější pravidla.
 Klasická hladká sazba se doplňuje o další řezy písma pro zvýraznění důležitých pojmů.
 Existuje \uv{pravidlo}:
+% \medskip
 \begin{quotation}
-Čím více \texttt{druhů}, \emph{řezů}, { \tiny velikostí}, \textcolor{green}{barev} písma a \textcolor{blue}{\textsc{jiných efektů}} \underline{použijeme}, \textcolor{red}{tím profesionálněji} bude { \fontfamily{pzc}\selectfont dokument } vypadat.
-Čtenář tím bude { \Huge \textbf{vždy nadšen!} }
+Čím více \texttt{druhů}, \emph{řezů}, {\tiny velikostí}, \textcolor{green}{barev} písma a \textcolor{blue}{\textsc{jiných efektů}} \underline{použijeme}, \textcolor{red}{tím profesionálněji} bude {\fontfamily{pzc}\selectfont dokument} vypadat.
+Čtenář tím bude \textbf{\Huge vždy nadšen!}
 \end{quotation}
+% \medskip
 
 \textsc{Tímto pravidlem se \underline{nesmíte nikdy řídit.}}
-Příliš časté zvýrazňování textových elementů a změny {\tiny velikosti} písma jsou známkou \textbf{amatérismu autora} a působí {\ttfamily velmi rušivě}.
+Příliš časté zvýrazňování textových elementů a změny {\scriptsize velikosti} písma jsou známkou \textbf{amatérismu autora} a působí {\ttfamily velmi rušivě}.
 Dobře navržený dokument nemá obsahovat více než 4 řezy či druhy písma.
 Dobře navržený dokument je \underline{decentní, ne chaotický.}
 
-Důležitým znakem správně vysázeného dokumentu je konzistence - například \textbf{tučný řez} písma bude vyhrazen pouze pro klíčová slova, \emph{kurzíva} pouze pro doposud neznámé pojmy a nebude se to míchat.
+Důležitým znakem správně vysázeného dokumentu je konzistence\,--\,například \textbf{tučný řez} písma bude vyhrazen pouze pro klíčová slova, \emph{kurzíva} pouze pro doposud neznámé pojmy a nebude se to míchat.
 Kurzíva nepůsobí tak rušivě a používá se častěji.
 V \LaTeX u ji sázíme raději příkazem \verb|\emph{text}| než \verb|\textit{text}|.
 
@@ -57,7 +56,7 @@ U delších dokumentů vědeckého či technického charakteru je zvykem vysvět
 
 \section{Další rady:}
 \begin{itemize}
-    \item Nadpis nesmí končit dvojtečkou a nesmí obsahovat odkazy na obrázky, citace, poznámky pod čarou, ...
+    \item Nadpis nesmí končit dvojtečkou a nesmí obsahovat odkazy na obrázky, citace, poznámky pod čarou, \dots
     \item Nadpisy, číslování a odkazy na číslované elementy musí být sázeny příkazy k tomu určenými.
 Číslování sekcí tohoto dokumentu je zajištěno příkazem \verb|\section|.
     \item Poznámky pod čarou\footnote{Příliš mnoho poznámek pod čarou čtenáře zbytečně rozptyluje.} používejte opravdu střídmě.
