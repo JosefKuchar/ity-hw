@@ -4,4 +4,4 @@ pdf:
 	ps2pdf proj1.ps
 
 clean:
-	rm -f *.aux *.dvi *.log *.ps proj1.pdf
+	rm -f *.aux *.dvi *.out *.log *.ps proj1.pdf
