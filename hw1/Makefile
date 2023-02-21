@@ -1,7 +1,7 @@
 pdf:
-	latex source.tex
-	dvips source.dvi
-	ps2pdf source.ps
+	latex proj1.tex
+	dvips proj1.dvi
+	ps2pdf proj1.ps
 
 clean:
-	rm -f *.aux *.dvi *.log *.ps *.pdf
+	rm -f *.aux *.dvi *.log *.ps proj1.pdf
