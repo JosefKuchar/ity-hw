@@ -9,11 +9,10 @@
 \usepackage[a4paper,total={18.2cm,25.2cm},left=1.4cm,top=2.3cm]{geometry}
 \usepackage[colorlinks=true,linkcolor=black,urlcolor=black]{hyperref}
 
-\theoremstyle{definition}
-\newtheorem{definition}{Definice}[section]
-
 \theoremstyle{plain}
-\newtheorem{theorem}{Věta}[section]
+\newtheorem{definition}{Definice}
+\theoremstyle{plain}
+\newtheorem{theorem}{Věta}
 
 \begin{document}
 
@@ -23,6 +22,7 @@
 \vspace{\stretch{0.382}}
 \LARGE
 Typografie a publikování\,--\,2. projekt\\
+\vspace{0.4em}
 Sazba dokumentů a matematických výrazů
 \vspace{\stretch{0.618}}
 \end{center}
@@ -35,46 +35,46 @@ Sazba dokumentů a matematických výrazů
 \section*{Úvod}
 V této úloze si vyzkoušíme sazbu titulní strany, matematických vzorců,
 prostředí a dalších textových struktur obvyklých pro technicky zaměřené
-texty\,--\,například Definice 1 nebo rovnice (3) na straně. Pro vytvoření těchto
+texty\,--\,například Definice~1 nebo rovnice (3) na straně 1. Pro vytvoření těchto
 odkazů používáme kombinace příkazů \verb|\label|, \verb|\ref|, \verb|\eqref| a \verb|\pageref|.
 Před odkazy patří nezlomitelná mezera. Pro zvýrazňování textu jsou zde
 několikrát použity příkazy \verb|\verb| a \verb|\emph|.
 
 Na titulní straně je použito
 prostředí \verb|titlepage| a sázení nadpisu podle optického středu s využitím
-přesného zlatého řezu. Tento postup byl probírán na přednášce. Dále jsou
+\emph{přesného} zlatého řezu. Tento postup byl probírán na přednášce. Dále jsou
 na titulní straně použity čtyři různé velikosti písma a mezi dvojicemi
-řádků textu je použito odřádkování se zadanou relativní velikostí 0,5 em
-a 0,4 em\footnote{Nezapomeňte použít správný typ mezery mezi číslem a jednotkou.}.
+řádků textu je použito odřádkování se zadanou relativní velikostí 0,5\,em
+a 0,4\,em\footnote{Nezapomeňte použít správný typ mezery mezi číslem a jednotkou.}.
 
 \section{Matematický text}
 V této sekci se podíváme na sázení matematických symbolů a výrazů v plynulém
-textu pomocí prostředí math. Definice a věty sázíme pomocí příkazu \verb|\newtheorem|
+textu pomocí prostředí \verb|math|. Definice a věty sázíme pomocí příkazu \verb|\newtheorem|
 s využitím balíku \verb|amsthm|. Někdy je vhodné použít konstrukci \verb|${}$| nebo \verb|\mbox{}|,
 která říká, že (matematický) text nemá být zalomen.
 
 \begin{definition}
-Zásobníkový automat (ZA) je definován jako sedmice tvaru
+\emph{Zásobníkový automat} (ZA) je definován jako sedmice tvaru
 $A = (Q, \Sigma, \Gamma, \delta, q_0, Z_0, F)$, kde:
-\end{definition}
 \begin{itemize}
-    \item $Q$ je konečná množina vnitřních (řídicích) stavů,
-    \item $\Sigma$ je konečná vstupní abeceda,
-    \item $\Gamma$ je konečná zásobníková abeceda,
-    \item $\delta$ je přechodová funkce $Q \times \left(\Sigma \cup \{ \epsilon \} \right) \times \Gamma \rightarrow 2^{Q \times \Gamma^*}$,
-    \item $q_0 \in Q$ je počáteční stav, $Z_0 \in \Gamma$ je startovací symbol zásobníku a $F \subseteq Q$ je množina koncových stavů.
+    \item $Q$ je konečná množina \emph{vnitřních (řídicích) stavů},
+    \item $\Sigma$ je konečná \emph{vstupní abeceda},
+    \item $\Gamma$ je konečná \emph{zásobníková abeceda},
+    \item $\delta$ je \emph{přechodová funkce} $Q \times \left(\Sigma \cup \{\epsilon\}\right) \times \Gamma \rightarrow 2^{Q \times \Gamma^*}$,
+    \item $q_0 \in Q$ je \emph{počáteční stav}, $Z_0 \in \Gamma$ je \emph{startovací symbol zásobníku} a $F \subseteq Q$ je množina \emph{koncových stavů}.
 \end{itemize}
+\end{definition}
 
-Nechť $P = \left(Q, \Sigma, \Gamma, \delta, q_0, Z_0, F\right)$ je ZA. Konfigurací nazveme trojici $(q, w, a) \in Q \times \Sigma^* \times \Gamma^*$, kde $q$ je aktuální stav vnitřního
+Nechť $P = \left(Q, \Sigma, \Gamma, \delta, q_0, Z_0, F\right)$ je ZA. \emph{Konfigurací} nazveme trojici $(q, w, \alpha) \in Q \times \Sigma^* \times \Gamma^*$, kde $q$ je aktuální stav vnitřního
 řízení, $w$ je dosud nezpracovaná část vstupního řetězce a $\alpha = Z_{i_1} Z_{i_2} \dots Z_{i_k}$ je obsah zásobníku.
 
 \subsection{Podsekce obsahující definici a větu}
 \begin{definition}
-Řetězec $w$ nad abecedou $\Sigma$ je přijat ZA $A$ \emph{jestliže} $\left(q_0, w, Z_0\right) (q_F, \epsilon, \gamma)$ pro nějaké $\gamma \in \Gamma^*$ a $q_F \in F$.
-Množina A je jazyk přijímaný ZA.
+\emph{Řetězec $w$ nad abecedou $\Sigma$ je přijat ZA} $A$~jestliže $\left(q_0, w, Z_0\right) \underset{A}{\overset{*}{\vdash}} (q_F, \epsilon, \gamma)$ pro nějaké $\gamma \in \Gamma^*$ a $q_F \in F$.
+Množina $L(A) = \{w\textrm{ $|$ }w \textrm{ je přijat ZA } A\} \subseteq \Sigma^*$ je \emph{jazyk přijímaný ZA} $A$.
 \end{definition}
 \begin{theorem}
-Třída jazyků, které jsou přijímány ZA, odpovídá bezkontextovým jazykům.
+Třída jazyků, které jsou přijímány ZA, odpovídá \emph{bezkontextovým jazykům}.
 \end{theorem}
 
 \section{Rovnice}
@@ -89,23 +89,21 @@ $$
 V rovnici (2) jsou využity tři typy závorek s různou \emph{explicitně}
 definovanou velikostí. Také nepřehlédněte, že nasledující tři rovnice mají zarovnaná
 rovnítka, a použijte k~tomuto účelu vhodné prostředí.
-
 \begin{eqnarray}
 - \cos^2 \beta & = & \frac{\frac{\frac{1}{x} + \frac{1}{3}}{y} + 1000}{\prod\limits^8_{j = 2} q_j} \\
-\left(\left\{b \star \left[3 \div 4\right] \circ a \right\}^{\frac{2}{3}}\right) & = & \log_{10} x \\
-\int_a^b f(x) dx & = & \int_c^d f(y) dy
+\biggl(\Bigl\{b \star \bigl[3 \div 4\bigr] \circ a \Bigr\}^{\frac{2}{3}}\biggr) & = & \log_{10} x \\
+\int_a^b f(x) \,\mathrm{d}x & = & \int_c^d f(y) \,\mathrm{d}y
 \end{eqnarray}
 V této větě vidíme, jak vypadá
 implicitní vysázení limity $\lim_{m \rightarrow \infty} f(m)$ v normálním odstavci textu. Podobně je to i~s~dalšími symboly
-jako $\cup_{N \in \mathcal{M}}N$ či $\sum_{i=1}^m x_i^2$. S vynucením méně úsporné sazby příkazem \verb|\limits| budou vzorce vysázeny v podobě
+jako $\bigcup_{N \in \mathcal{M}}N$ či $\sum_{i=1}^m x_i^2$. S vynucením méně úsporné sazby příkazem \verb|\limits| budou vzorce vysázeny v podobě
 $\lim\limits_{m \rightarrow \infty} f(m)$ a $\sum\limits_{i=1}^m x_i^4$.
 
 \section{Matice}
 Pro sázení matic se velmi často používá prostředí \texttt{array}
  a závorky (\verb|\left|, \verb|\right|).
-
 $$
-\bold{B} =
+\mathbf{B} =
 \left|
 \begin{array}{cccc}
     b_{11} & b_{12} & \cdots & b_{1n} \\
@@ -126,7 +124,7 @@ tw - uv
 $$
 
 $$
-\mathbb{X} = \bold{Y} \Longleftrightarrow \left[
+\mathbb{X} = \mathbf{Y} \Longleftrightarrow \left[
 \begin{array}{ccc}
       & \Omega + \Delta & \hat{\psi} \\
     \vec{\pi} & \omega &
