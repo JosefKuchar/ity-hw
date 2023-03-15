@@ -1,5 +1,6 @@
 pdf:
 	latex proj2.tex
+	latex proj2.tex
 	dvips proj2.dvi
 	ps2pdf proj2.ps
 
